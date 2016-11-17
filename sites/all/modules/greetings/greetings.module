@@ -1,0 +1,30 @@
+<?php
+function greetings_menu(){
+  $items = array();
+  $items['hello'] = array(
+    'title' => "Hello",
+    'page callback' => 'hello',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK
+  );
+  $items['goodbye'] = array(
+    'title' => 'Au Revoir',
+    'page callback' => 'goodbye',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK
+  );
+  return $items;
+}
+function hello(){
+
+  return '<img src="http://www.kittyhell.com/wp-content/uploads/2008/07/hello-kitty-latte.jpg"><br><p>Hello Dark Roast, my old friend</p>';
+}
+function goodbye(){
+  return '<img src="http://www.denbydalecoffee.co.uk/UserFiles/image/ciao-coffee-cups.jpg">';
+}
+function greetings_user_login(){
+  $_GET['destination'] = 'hello';
+}
+function greetings_user_logout(){
+  $_GET['destination'] = 'goodbye';
+}

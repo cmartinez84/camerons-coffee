@@ -1,0 +1,5 @@
+name = Greeting
+description = Redirect to a greeting page on hello and goodbye page upon exiting.
+package = My First Modules
+core = 7.x
+files[] = greetings.modules
